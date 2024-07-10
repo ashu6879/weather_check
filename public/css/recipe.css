@@ -25,12 +25,11 @@ input[type="text"] {
     border-radius: 4px;
     width: 300px;
 }
-
-button {
+#searchButton{
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
     border-radius: 4px;
     cursor: pointer;
