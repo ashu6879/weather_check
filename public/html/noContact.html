@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Message Sender</title>
+    <link rel="stylesheet" href="/public/css/noContact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+        </div>
+        <h1>Send a WhatsApp Message</h1>
+        <form id="whatsapp-form">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter mobile number" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <button id="homeButton" onclick="window.location.href='../../index.html'">Back to home</button>
+        </form>
+    </div>
+    <script src="/public/js/noContact.js"></script>
+</body>
+</html>
