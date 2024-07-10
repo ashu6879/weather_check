@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="\public\css\styles.css">
 </head>
 <body>
     <div class="weather-app">
@@ -12,6 +12,7 @@
         <div class="search">
             <input type="text" id="city" placeholder="Enter city name">
             <button id="searchButton">Search</button>
+            <button id="homeButton" onclick="window.location.href='../../index.html'">Home</button>
         </div>
         <div class="weather-info">
             <h2 id="cityName">City</h2>
@@ -21,6 +22,6 @@
             <p id="humidity">Description: --</p>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="\public\js\script.js"></script>
 </body>
 </html>

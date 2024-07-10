@@ -47,6 +47,16 @@ h1 {
     margin-left: 10px;
     cursor: pointer;
 }
+#homeButton{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
 #searchButton:hover {
     background: #0056b3;
