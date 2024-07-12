@@ -9,14 +9,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const APP_ID = '9938dec9';
     const APP_KEY = 'ad4aaf6a4fa8516ab8b204544a16fd51';
     const API_URL = `https://api.edamam.com/search`;
+    
+    function showLoader() {
+        document.getElementById('loader').style.display = 'block';
+      }
+  
+      // Hide loader
+      function hideLoader() {
+        document.getElementById('loader').style.display = 'none';
+      }
     async function fetchRecipes(query) {
-        const response = await fetch(`${API_URL}?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
-        const data = await response.json();
-        return data.hits.map(hit => ({
+        showLoader();
+        try {
+          const response = await fetch(`${API_URL}?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
+          const data = await response.json();
+          return data.hits.map(hit => ({
             title: hit.recipe.label,
             ingredients: hit.recipe.ingredients.map(ingredient => ingredient.text)
-        }));
-    }
+          }));
+        } catch (error) {
+          console.error('Error fetching recipes:', error);
+          return [];
+        } finally {
+          hideLoader();
+        }
+      }
 
     // Function to display recipes
     function displayRecipes(recipes) {

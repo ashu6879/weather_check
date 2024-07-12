@@ -103,3 +103,15 @@ main {
     text-decoration: none;
     cursor: pointer;
 }
+#loader {
+    width: 5rem;
+    display: none; /* Initially hide the loader */
+    position: fixed; /* Positioning relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    z-index: 9999; /* Ensure it's above other content */
+    /* Add other styles for your loader */
+}
+
+
